@@ -1,0 +1,77 @@
+// 
+// variables.scss
+// 
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
+
+//color
+$primary:   #e08a21;
+$secondary: #FF7F51;
+$success:   #1abc9c;
+$info:      #49c6e5;
+$warning:   #ffcd00;
+$danger:    #ef4b4b;
+$white:     #ffffff;
+$dark:      #1c2f50;
+$light:     #fbfbff;
+$muted:     #9da9bb;
+$black:     #000000;
+$purple:    #8060cf;
+$cyan:      #00e6e6;
+$blue:      #2558ab;
+
+
+// stylelint-disable
+$gray-100:  #f8f9fa;
+$gray-200:  #e9ecef;
+$gray-300:  #dee2e6;
+$gray-400:  #ced4da;
+$gray-500:  #adb5bd;
+$gray-600:  #6c757d;
+$gray-700:  #495057;
+$gray-800:  #343a40;
+$gray-900:  #212529;
+
+
+$colors: (
+  "primary":      $primary,
+  "secondary":    $secondary,
+  "success":      $success,
+  "info":         $info,
+  "warning":      $warning,
+  "danger":       $danger,
+  "dark":         $dark,
+  "cyan":         $cyan,
+  "blue":         $blue,
+  "muted":        $muted,
+  "purple":       $purple,
+  "light":        $light,
+  "white":        $white,
+);
+
+$theme-colors: (
+  "primary":      $primary,
+  "secondary":    $secondary,
+  "success":      $success,
+  "info":         $info,
+  "warning":      $warning,
+  "danger":       $danger,
+  "light":        $light,
+  "dark":         $dark,
+  "muted":        $muted,
+  "white":        $white,
+);
+
+//box-shadow
+$box-shadow:       rgba(125 125 125) 0px 4px 20px;
+
+// font weight
+$font-weight-medium:    600;
+$font-weight-semibold:  700;
+
+// font-family
+$font-family-base:        "Nunito Sans", sans-serif;
+$font-family-secondary:   "Nunito Sans", sans-serif;
+
+

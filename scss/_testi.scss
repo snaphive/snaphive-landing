@@ -1,0 +1,77 @@
+// 
+// testi.scss
+// 
+
+.secound-image{
+    position: relative;
+    margin-top: -130px;
+    /* left: 0; */
+    float: right;
+    left: 35px;
+}
+
+.testi-indicators {
+    align-items: center;
+    position: absolute;
+    bottom: -55%;
+    justify-content: start;
+    margin-left: 0;
+    button {
+        width: 50px !important;
+        height: 50px !important;
+        margin: 10px 5px !important;
+        border-radius: 50% !important;
+        border: 3px solid transparent !important;
+        // cursor: pointer;
+        overflow: hidden;
+        display: block;
+
+        
+    }    
+    
+button.active{
+    opacity: 1;
+    width: 80px !important;
+    height: 80px !important;
+}
+}
+
+
+.quote-icon{
+    font-size: 60px;
+}
+
+@media (max-width: 992px){
+    .testi-indicators{
+        bottom: -32%;
+    }
+
+
+
+    .testi-indicators {
+        align-items: center;
+        position: absolute;
+        bottom: -30%;
+        justify-content: start;
+        margin-left: 0;
+        button {
+            width: 50px !important;
+            height: 50px !important;
+            margin: 10px 5px !important;
+            border-radius: 50% !important;
+            border: 3px solid transparent !important;
+            // cursor: pointer;
+            overflow: hidden;
+            display: block;
+    
+            
+        }    
+        
+    button.active{
+        opacity: 1;
+        width: 60px !important;
+        height: 60px !important;
+    }
+    }
+    
+}

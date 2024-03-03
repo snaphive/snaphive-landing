@@ -1,0 +1,48 @@
+// 
+// cta.scss
+// 
+
+.cta-bg{
+    background-color: #3e72d2;
+}
+
+.cta-search .form-control {
+    border: none;
+}
+.form-control {
+    // margin-bottom: 15px;
+    box-shadow: none !important;
+    height: 46px;
+    padding-left: 20px;
+    border: 1px solid #dfe9f1;
+    font-size: 14px;
+    color: #9197b5;
+    border-radius: 5px;
+}
+
+.cta-overlay {
+    background-image: url(../images/cta.jpg);
+    opacity: 0.07;
+    background-position: bottom;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+}
+
+.team-social{
+    .list-inline{
+        .list-inline-item{
+            background-color: $muted;
+            color: $white;
+
+            &:hover{
+                background-color: $primary;
+                transition: all 0.5s;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.footer-email form {
+  position: relative;
+  max-width: 600px;
+}
+.footer-email input {
+  padding: 12px 8px;
+  width: 100%;
+  font-size: 15px;
+  color: #9197b5;
+  border: none;
+  border-bottom: 2px solid rgba(224, 138, 33, 0.44);
+  outline: none !important;
+  background-color: transparent;
+  padding-right: 80px;
+}
+.footer-email button {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  outline: none !important;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 5px 15px;
+}
+
+.back-to-top {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  text-align: center;
+  z-index: 10000;
+  border-radius: 3px;
+  transition: all 0.5s;
+}/*# sourceMappingURL=footer.css.map */

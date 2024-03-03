@@ -1,0 +1,70 @@
+// 
+// pricing.scss
+// 
+
+.pricing-pills{
+    background-color: $white
+}
+
+.pricing-link {
+    color: #3e72d2;
+}
+
+.pricing-link.active, .pricing-link:focus, .pricing-link:hover {
+    color: #3e72d2;
+}
+
+.pricing-pills .pricing-link.active,
+.pricing-pills .show>.pricing-link {
+    color: $white;
+}
+
+.pricing-link.active,
+.show>.pricing-link {
+    background-color: #3e72d2  !important;
+}
+
+.pricing-box.active{
+    border: 2px solid #3e72d2b0;
+}
+
+.pricing-box{
+    border-radius: 20px;
+    border: 2px solid #eeeeee;
+
+    .badge-bg.active{
+        background-color: rgba(#3e72d2, 0.5);
+    }
+    
+    .badge-bg{
+        background-color: rgba($primary, 0.5);
+    }
+    
+    .price-bg{
+        border-radius: 20px;
+    }
+
+    .price-check{
+        color: $primary;
+    }
+    .price-check.active{
+        color: #3e72d2;
+    }
+
+    &:hover{
+        border: 2px solid #3e72d2b0;
+        transition: all 0.5s ease-in-out;
+
+        .badge-bg{
+            background-color: rgba(#3e72d2, 0.5);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .price-check{
+        color: #3e72d2;
+        transition: all 0.5s ease-in-out;
+        }
+        
+    }
+}
+
