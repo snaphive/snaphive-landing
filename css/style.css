@@ -1929,4 +1929,11 @@ ul.pattern .color6 {
   z-index: 10000;
   border-radius: 3px;
   transition: all 0.5s;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.feature-list {
+  li {
+    padding-bottom: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
