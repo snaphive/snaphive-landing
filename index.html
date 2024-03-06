@@ -130,8 +130,8 @@
                         <p class="text-white-50 mx-auto">SnapHive will streamline your documentation process, whether working solo or in a team,
                             with easy to edit, searchable, and consistently styled and annotated screenshots.</p>
                         <div class="mt-4">
-                            <a href="#" class="btn btn-primary me-3">Get Started</a>
-                            <a href="#" class="btn btn-outline-white">View More <i
+                            <a href="#" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#waitingListModal">Get Started</a>
+                            <a href="#" class="btn btn-outline-white visually-hidden">View More <i
                                     class="mdi mdi-chevron-right"></i></a>
                         </div>
                     </div>
@@ -391,6 +391,21 @@
     </section>
     <!-- end section -->
 
+        <!-- Start Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8">
+                        <div class="text-center">
+                            <h2 class="fw-bold">Take your documentation to the next level</h2>
+                            <p class="text-muted mt-3">Stop wasting time with outdated static screenshots. Experience the power and flexibility of SnapHive today.</p>
+                            <a href="#" class="btn btn-primary btn-lg mt-4" data-bs-toggle="modal" data-bs-target="#waitingListModal">Sign-up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Call to Action -->
 
     <!-- start section -->
     <section class="testimonials bg-white section" id="testimonials">
@@ -1040,6 +1055,27 @@
 
     <!-- custom js -->
     <script type="text/javascript" src="js/app.js"></script>
+
+        <div class="modal fade" id="waitingListModal" tabindex="-1" aria-labelledby="waitingListModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title mt-3" id="waitingListModalLabel">Join the Waiting List</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Thank you for your interest! We're currently working hard to bring you an amazing product. Join our waiting list to be among the first to know when we launch.</p>
+                        <form>
+                            <div class="mb-3">
+                                <label for="waitingListEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="waitingListEmail" placeholder="Enter your email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Join Waiting List</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 </body>
 
