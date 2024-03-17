@@ -1087,7 +1087,34 @@
             </div>
         </div>
 
-        <script type="text/javascript" src="js/conversions.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                const signupButtons = document.querySelectorAll('.btn-primary[data-bs-target], .btn-primary[data-bs-toggle="modal"]');
+
+                signupButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        gtag('event', 'clicked_signup', {
+                            'event_category': 'Sign Up',
+                            'event_label': `Clicked ${button.textContent.trim()} Button`
+                        });
+                    });
+                });
+
+                const waitingListForm = document.querySelector('form[netlify]');
+
+                waitingListForm.addEventListener('submit', (event) => {
+                    const emailInput = document.querySelector('#waitingListEmail');
+                    const email = emailInput.value.trim();
+
+                    if (email) {
+                        gtag('event', 'submitted_signup', {
+                            'event_category': 'Sign Up',
+                            'event_label': 'Submitted Waiting List Form'
+                        });
+                    }
+                });
+            });
+        </script>
 </body>
 
 </html>
