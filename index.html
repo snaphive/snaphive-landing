@@ -1100,9 +1100,7 @@
 
                 // Look for the form-name
                 document.addEventListener('submit', function(event) {
-                    var formNameInput = event.target.querySelector('input[name="form-name"][value="form 1"]');
-                    if (formNameInput) {
-                        event.preventDefault(); // Prevent the form from submitting normally
+                    if (event.target.className == 'waiting-form') {
                         // Send the event to Google Analytics
                         gtag('event', 'submitted_signup', {
                             'event_category': 'Sign Up',
