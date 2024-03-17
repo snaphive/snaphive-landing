@@ -36,7 +36,6 @@
 
     <!-- colors -->
     <link href="css/colors/default.css" rel="stylesheet" type="text/css" id="color-opt" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -1074,7 +1073,7 @@
                     </div>
                     <div class="modal-body">
                         <p>Thank you for your interest! We're currently working hard to bring you an amazing product. Join our waiting list to be among the first to know when we launch.</p>
-                        <form netlify>
+                        <form netlify class="waiting-form">
                             <div class="mb-3">
                                 <label for="waitingListEmail" class="form-label">Email address</label>
                                 <input type="email" class="form-control" id="waitingListEmail" name="waitingListEmail" placeholder="Enter your email" />
@@ -1099,28 +1098,16 @@
                     });
                 });
 
-                const waitingListForm = document.querySelector('form[netlify]');
-
-                $('#waitingListModal').on('shown.bs.modal', function () {
-                    // Now that the modal is shown, we can safely attach the event listener to the form
-                    const waitingListForm = document.querySelector('form[netlify]');
-
-                    // Ensure the form exists before adding the event listener
-                    if(waitingListForm) {
-                        waitingListForm.addEventListener('submit', (event) => {
-                            const emailInput = document.querySelector('#waitingListEmail');
-                            const email = emailInput.value.trim();
-
-                            if (email) {
-                                gtag('event', 'submitted_signup', {
-                                    'event_category': 'Sign Up',
-                                    'event_label': 'Submitted Waiting List Form'
-                                });
-                            }
+                // Look for the form-name
+                document.addEventListener('submit', function(event) {
+                    var formNameInput = event.target.querySelector('input[name="form-name"][value="form 1"]');
+                    if (formNameInput) {
+                        event.preventDefault(); // Prevent the form from submitting normally
+                        // Send the event to Google Analytics
+                        gtag('event', 'submitted_signup', {
+                            'event_category': 'Sign Up',
+                            'event_label': 'Submitted Waiting List Form'
                         });
-                    } else {
-                        // Log or handle the case where the form is not found
-                        console.error('Form not found');
                     }
                 });
             });
@@ -1128,3 +1115,4 @@
 </body>
 
 </html>
+
