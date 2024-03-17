@@ -36,8 +36,7 @@
 
     <!-- colors -->
     <link href="css/colors/default.css" rel="stylesheet" type="text/css" id="color-opt" />
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -1102,15 +1101,26 @@
 
                 const waitingListForm = document.querySelector('form[netlify]');
 
-                waitingListForm.addEventListener('submit', (event) => {
-                    const emailInput = document.querySelector('#waitingListEmail');
-                    const email = emailInput.value.trim();
+                $('#waitingListModal').on('shown.bs.modal', function () {
+                    // Now that the modal is shown, we can safely attach the event listener to the form
+                    const waitingListForm = document.querySelector('form[netlify]');
 
-                    if (email) {
-                        gtag('event', 'submitted_signup', {
-                            'event_category': 'Sign Up',
-                            'event_label': 'Submitted Waiting List Form'
+                    // Ensure the form exists before adding the event listener
+                    if(waitingListForm) {
+                        waitingListForm.addEventListener('submit', (event) => {
+                            const emailInput = document.querySelector('#waitingListEmail');
+                            const email = emailInput.value.trim();
+
+                            if (email) {
+                                gtag('event', 'submitted_signup', {
+                                    'event_category': 'Sign Up',
+                                    'event_label': 'Submitted Waiting List Form'
+                                });
+                            }
                         });
+                    } else {
+                        // Log or handle the case where the form is not found
+                        console.error('Form not found');
                     }
                 });
             });
