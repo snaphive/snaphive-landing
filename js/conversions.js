@@ -1,5 +1,5 @@
 // Wait for the DOM to be loaded
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
     const signupButtons = document.querySelectorAll('.btn-primary[data-bs-target], .btn-primary[data-bs-toggle="modal"]');
 
     // Add click event listener to each signup button
