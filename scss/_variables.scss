@@ -3,7 +3,14 @@
 // 
 
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
+@font-face {
+  font-family: 'Geist';
+  src: url('../fonts/Geist-Variable.woff2') format('woff2'),
+  url('../fonts/Geist-Variable.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 //color
 $primary:   #e08a21;
@@ -70,8 +77,9 @@ $box-shadow:       rgba(125 125 125) 0px 4px 20px;
 $font-weight-medium:    600;
 $font-weight-semibold:  700;
 
+
 // font-family
-$font-family-base:        "Nunito Sans", sans-serif;
-$font-family-secondary:   "Nunito Sans", sans-serif;
+$font-family-base: 'Geist', sans-serif;
+$font-family-secondary: 'Geist', sans-serif;
 
 

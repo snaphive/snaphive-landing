@@ -2,9 +2,14 @@
    Author: Pichforest
    File Description: Main Css file of the template
 */
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap");
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Variable.woff2") format("woff2"), url("../fonts/Geist-Variable.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Geist", sans-serif;
   color: #1c2f50;
   font-size: 16px;
 }
@@ -15,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Geist", sans-serif;
   line-height: 1.4;
 }
 
@@ -1032,8 +1037,7 @@ html {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hero-slider .swiper-pagination-bullet {
   width: 8px;
@@ -1208,9 +1212,6 @@ html {
 
 .home-12 {
   padding: 100px 0;
-}
-.home-12 ::-moz-placeholder {
-  color: #ffffff;
 }
 .home-12 ::placeholder {
   color: #ffffff;
@@ -1839,6 +1840,10 @@ ul.pattern .color6 {
   border-radius: 5px;
 }
 
+.form-control#comments {
+  height: 92px;
+}
+
 .cta-overlay {
   background-image: url(../images/cta.jpg);
   opacity: 0.07;
@@ -1931,9 +1936,4 @@ ul.pattern .color6 {
   transition: all 0.5s;
 }
 
-.feature-list {
-  li {
-    padding-bottom: 15px;
-  }
-}
 /*# sourceMappingURL=style.css.map */
