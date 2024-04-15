@@ -38,10 +38,10 @@ var spy = new Gumshoe('#navbar-navlist a', {
 
 // Contact Form
 function validateForm(event) {
-    var name = document.forms["myForm"]["name"].value;
-    var email = document.forms["myForm"]["email"].value;
-    var subject = document.forms["myForm"]["subject"].value;
-    var comments = document.forms["myForm"]["comments"].value;
+    var name = document.forms["contactForm"]["name"].value;
+    var email = document.forms["contactForm"]["email"].value;
+    var subject = document.forms["contactForm"]["subject"].value;
+    var comments = document.forms["contactForm"]["comments"].value;
     document.getElementById("error-msg").style.opacity = 0;
     document.getElementById('error-msg').innerHTML = "";
     if (name == "" || name == null) {
@@ -65,8 +65,8 @@ function validateForm(event) {
         return false;
     }
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
+    const contactForm = event.target;
+    const formData = new FormData(contactForm);
     
     fetch("/", {
       method: "POST",
@@ -76,10 +76,10 @@ function validateForm(event) {
     .then(() => {
         console.log("Form successfully submitted");
         document.getElementById("simple-msg").innerHTML = "Thank you for your message.";
-        document.forms["myForm"]["name"].value = "";
-        document.forms["myForm"]["email"].value = "";
-        document.forms["myForm"]["subject"].value = "";
-        document.forms["myForm"]["comments"].value = "";
+        document.forms["contactForm"]["name"].value = "";
+        document.forms["contactForm"]["email"].value = "";
+        document.forms["contactForm"]["subject"].value = "";
+        document.forms["contactForm"]["comments"].value = "";
     })
     .catch(error => {
         console.error(error);

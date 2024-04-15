@@ -755,7 +755,7 @@
 
                 <div class="col-lg-7">
                     <div class="custom-form">
-                        <form method="post" netlify name="myForm" onsubmit="return validateForm(event)">
+                        <form method="post" netlify name="contactForm" onsubmit="return validateForm(event)">
                             <p id="error-msg"></p>
                             <div id="simple-msg"></div>
                             <div class="row">
@@ -866,7 +866,7 @@
                     </div>
                     <div class="modal-body">
                         <p>Thank you for your interest! We're currently working hard to bring you an amazing product. Join our waiting list to be among the first to know when we launch.</p>
-                        <form netlify class="waiting-form">
+                        <form name="waitingListForm" netlify class="waiting-form">
                             <div class="mb-3">
                                 <label for="waitingListEmail" class="form-label">Email address</label>
                                 <input type="email" class="form-control" id="waitingListEmail" name="waitingListEmail" placeholder="Enter your email" />
