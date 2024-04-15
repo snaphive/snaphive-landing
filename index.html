@@ -755,7 +755,7 @@
 
                 <div class="col-lg-7">
                     <div class="custom-form">
-                        <form method="post" name="myForm" onsubmit="return validateForm()">
+                        <form method="post" netlify name="myForm" onsubmit="return validateForm(event)">
                             <p id="error-msg"></p>
                             <div id="simple-msg"></div>
                             <div class="row">
@@ -776,7 +776,7 @@
                                 <div class="col-lg-12">
                                     <div class="mb-2 mt-2">
                                         <label class="form-label text-muted">Your Subject</label>
-                                        <input type="text" class="form-control" id="subject"  placeholder="Subject">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                                     </div>
                                 </div>
                             </div>

@@ -37,7 +37,7 @@ var spy = new Gumshoe('#navbar-navlist a', {
 
 
 // Contact Form
-function validateForm() {
+function validateForm(event) {
     var name = document.forms["myForm"]["name"].value;
     var email = document.forms["myForm"]["email"].value;
     var subject = document.forms["myForm"]["subject"].value;
@@ -65,19 +65,27 @@ function validateForm() {
         return false;
     }
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("simple-msg").innerHTML = this.responseText;
-            document.forms["myForm"]["name"].value = "";
-            document.forms["myForm"]["email"].value = "";
-            document.forms["myForm"]["subject"].value = "";
-            document.forms["myForm"]["comments"].value = "";
-        }
-    };
-    xhttp.open("POST", "php/contact.php", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("name=" + name + "&email=" + email + "&subject=" + subject + "&comments=" + comments);
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => {
+        console.log("Form successfully submitted");
+        document.getElementById("simple-msg").innerHTML = "Thank you for your message.";
+        document.forms["myForm"]["name"].value = "";
+        document.forms["myForm"]["email"].value = "";
+        document.forms["myForm"]["subject"].value = "";
+        document.forms["myForm"]["comments"].value = "";
+    })
+    .catch(error => {
+        console.error(error);
+        document.getElementById('error-msg').innerHTML = "<div class='alert alert-warning'>*Something went wrong*</div>";
+    });
+
     return false;
 }
 
